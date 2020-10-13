@@ -1,21 +1,21 @@
 <!-- 密码item选项 -->
 <template>
 	<view>
-		<uni-list >
-		<!--    <uni-list-item  v-for="(item,index) in items" :showArrow="false" class="item" :title="'账号：'+item.name" >
-				  <template v-slot:header>
-				       asdfasdf
-				  </template>
-			</uni-list-item> -->
-			   <uni-list-item title="aa123123">
-			        <template v-slot:right>
-			          垂直排列的大图模式列表， header 内容为插槽自定义的内容
-			        </template>
-			    </uni-list-item>
-			
+	<!-- 一般用法 -->
+	<uni-collapse-item title="微信"  :open="true" thumb="https://ftp.bmp.ovh/imgs/2020/10/84ca10a94c162bb7.png">
+		<uni-list>
+			<uni-list-item title="标题文字1"></uni-list-item>
+			<uni-list-item title="标题文字2" note="描述信息" ></uni-list-item>
+			<uni-list-item title="标题文字3" note="描述信息1"></uni-list-item>
 		</uni-list>
-	
-
+	</uni-collapse-item>
+	<uni-collapse-item title="微信"  :open="false" thumb="https://img-cdn-qiniu.dcloud.net.cn/new-page/hx.png">
+		<uni-list>
+			<uni-list-item title="标题文字1"></uni-list-item>
+			<uni-list-item title="标题文字2" note="描述信息" ></uni-list-item>
+			<uni-list-item title="标题文字3" note="描述信息1"></uni-list-item>
+		</uni-list>
+	</uni-collapse-item>
 	</view>
 </template>
 

@@ -1,15 +1,10 @@
 <template>
 	<view class="container">
 		<uni-search-bar class="uni-searchbar" clearButton="auto" @input="searchTxt" cancelButton="none"  ></uni-search-bar>
-		<!-- 单行内容显示 -->
-		<!-- <uni-list>
-		    <uni-list-item  title="列表文字" ></uni-list-item>
-		    <uni-list-item :disabled="true" title="列表禁用状态" ></uni-list-item>
-		</uni-list> -->
 		<!-- 标题卡片模式 -->
-		<uni-card title="博客园" :is-shadow="true" >
+		<uni-collapse>
 			<pwd-item :data="items"></pwd-item>
-		</uni-card>
+		</uni-collapse>
 		<!-- 自定义底部按钮 -->
 	<!-- 	<uni-card title="Dcloud" note="true">
 		    默认内容
@@ -21,6 +16,11 @@
 		        </view>
 		    </template>
 		</uni-card> -->
+		
+		<!-- 提示信息 -->
+		<uni-popup ref="popup" type="message">
+		    <uni-popup-message type="success" :message=msg :duration="150"></uni-popup-message>
+		</uni-popup>
 	</view>
 </template>
 
@@ -28,6 +28,7 @@
 	export default {
 		data() {
 			return {
+				msg:'复制成功',
 				items:[{
 					name:'liuge',
 					pwd:'admin123@'
@@ -40,8 +41,14 @@
 			}
 		},
 		methods: {
+			showMsg(msg){
+				this.msg = msg || this.msg;
+				this.$refs.popup.open();
+			},
 			searchTxt(e){
+				console.log(this)
 				console.log(e);
+				this.showMsg();
 			}
 		}
 	}
@@ -54,6 +61,11 @@
 		line-height: 24px;
 	}
 	.uni-searchbar{
-		padding:17.77rpx 33.33rpx !important;
+		padding:17.77rpx 10rpx !important;
+	}
+	.uni-collapse{
+		margin-top:10px;
+		box-sizing: border-box;
+		padding:0 10rpx !important;
 	}
 </style>
