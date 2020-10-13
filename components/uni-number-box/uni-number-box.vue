@@ -10,6 +10,7 @@
 	</view>
 </template>
 <script>
+
 	/**
 	 * NumberBox 数字输入框
 	 * @description 带加减按钮的数字输入框
@@ -117,29 +118,33 @@
 		}
 	};
 </script>
-<style scoped>
+<style lang="scss" scoped>
+	$box-height: 35px;
 	/* #ifdef APP-NVUE */
+	$box-line-height: 35px;
 	/* #endif */
+	$box-line-height: 26px;
+	$box-width: 35px;
 
 	.uni-numbox {
 		/* #ifndef APP-NVUE */
 		display: flex;
 		/* #endif */
 		flex-direction: row;
-		height: 35px;
-		line-height: 35px;
+		height: $box-height;
+		line-height: $box-height;
 		width: 120px;
 	}
 
 	.uni-numbox__value {
-		background-color: #ffffff;
+		background-color: $uni-bg-color;
 		width: 40px;
-		height: 35px;
+		height: $box-height;
 		text-align: center;
-		font-size: 16;
+		font-size: $uni-font-size-lg;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #e5e5e5;
+		border-color: $uni-border-color;
 		border-left-width: 0;
 		border-right-width: 0;
 	}
@@ -151,20 +156,18 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		width: 35px;
-		height: 35px;
-		/* line-height: $box-line-height;
- */
-		/* text-align: center;
- */
+		width: $box-width;
+		height: $box-height;
+		// line-height: $box-line-height;
+		// text-align: center;
 		font-size: 20px;
-		color: #333;
-		background-color: #f8f8f8;
+		color: $uni-text-color;
+		background-color: $uni-bg-color-grey;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #e5e5e5;
-		border-top-left-radius: 3px;
-		border-bottom-left-radius: 3px;
+		border-color: $uni-border-color;
+		border-top-left-radius: $uni-border-radius-base;
+		border-bottom-left-radius: $uni-border-radius-base;
 		border-right-width: 0;
 	}
 
@@ -175,23 +178,23 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		width: 35px;
-		height: 35px;
+		width: $box-width;
+		height: $box-height;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #e5e5e5;
-		border-top-right-radius: 3px;
-		border-bottom-right-radius: 3px;
-		background-color: #f8f8f8;
+		border-color: $uni-border-color;
+		border-top-right-radius: $uni-border-radius-base;
+		border-bottom-right-radius: $uni-border-radius-base;
+		background-color: $uni-bg-color-grey;
 		border-left-width: 0;
 	}
 
 	.uni-numbox--text {
 		font-size: 40rpx;
-		color: #333;
+		color: $uni-text-color;
 	}
 
 	.uni-numbox--disabled {
-		color: #c0c0c0;
+		color: $uni-text-color-disable;
 	}
 </style>

@@ -1,5 +1,6 @@
 <template>
-	<text class="uni-link" :class="{'uni-link--withline':showUnderLine===true||showUnderLine==='true'}" :style="{color,fontSize:fontSize+'px'}" @click="openURL">{{text}}</text>
+	<text class="uni-link" :class="{'uni-link--withline':showUnderLine===true||showUnderLine==='true'}" :style="{color,fontSize:fontSize+'px'}"
+	 @click="openURL">{{text}}</text>
 </template>
 
 <script>
@@ -65,7 +66,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	.uni-link--withline {
 		text-decoration: underline;
 	}

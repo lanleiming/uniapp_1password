@@ -4,7 +4,8 @@
 			<text>{{label}}</text>
 		</view>
 		<view class="uni-combox__input-box">
-			<input class="uni-combox__input" type="text" :placeholder="placeholder" v-model="inputVal" @input="onInput" @focus="onFocus" @blur="onBlur" />
+			<input class="uni-combox__input" type="text" :placeholder="placeholder" v-model="inputVal" @input="onInput"
+			 @focus="onFocus" @blur="onBlur" />
 			<uni-icons class="uni-combox__input-arrow" type="arrowdown" size="14" @click="toggleSelector"></uni-icons>
 			<view class="uni-combox__selector" v-if="showSelector">
 				<scroll-view scroll-y="true" class="uni-combox__selector-scroll">
@@ -108,7 +109,7 @@
 			onBlur() {
 				setTimeout(() => {
 					this.showSelector = false
-				}, 50)
+				},50)
 			},
 			onSelectorClick(index) {
 				this.inputVal = this.filterCandidates[index]
@@ -124,7 +125,7 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.uni-combox {
 		/* #ifndef APP-NVUE */
 		display: flex;
@@ -132,7 +133,7 @@
 		height: 40px;
 		flex-direction: row;
 		align-items: center;
-		/* border-bottom: solid 1px #DDDDDD; */
+		// border-bottom: solid 1px #DDDDDD;
 	}
 
 	.uni-combox__label {

@@ -6,7 +6,8 @@
       circle === true || circle === 'true' ? 'uni-tag--circle' : '',
       mark === true || mark === 'true' ? 'uni-tag--mark' : '',
       'uni-tag--' + size
-    ]" @click="onClick()" class="uni-tag" v-if="text">
+    ]"
+	 @click="onClick()" class="uni-tag" v-if="text">
 		<text :class="[type === 'default' ? 'uni-tag--default':'uni-tag-text',inverted === true || inverted === 'true' ? 'uni-tag-text--'+type : '',size === 'small' ? 'uni-tag-text--small':'' ]">{{ text }}</text>
 	</view>
 </template>
@@ -83,21 +84,24 @@
 	};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+	$tag-pd: 0px 16px;
+	$tag-small-pd: 0px 8px;
+
 	.uni-tag {
 		/* #ifndef APP-NVUE */
 		display: flex;
 		/* #endif */
-		padding: 0px 16px;
+		padding: $tag-pd;
 		height: 30px;
 		line-height: 30px;
 		justify-content: center;
-		color: #333;
-		border-radius: 3px;
-		background-color: #f8f8f8;
+		color: $uni-text-color;
+		border-radius: $uni-border-radius-base;
+		background-color: $uni-bg-color-grey;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #f8f8f8;
+		border-color: $uni-bg-color-grey;
 	}
 
 	.uni-tag--circle {
@@ -117,110 +121,110 @@
 
 	.uni-tag--small {
 		height: 20px;
-		padding: 0px 8px;
+		padding: $tag-small-pd;
 		line-height: 20px;
-		font-size: 12px;
+		font-size: $uni-font-size-sm;
 	}
 
 	.uni-tag--default {
-		color: #333;
-		font-size: 14px;
+		color: $uni-text-color;
+		font-size: $uni-font-size-base;
 	}
 
 	.uni-tag-text--small {
-		font-size: 12px !important;
+		font-size: $uni-font-size-sm !important;
 	}
 
 	.uni-tag-text {
-		color: #fff;
-		font-size: 14px;
+		color: $uni-text-color-inverse;
+		font-size: $uni-font-size-base;
 	}
 
 	.uni-tag-text--primary {
-		color: #007aff !important;
+		color: $uni-color-primary !important;
 	}
 
 	.uni-tag-text--success {
-		color: #4cd964 !important;
+		color: $uni-color-success !important;
 	}
 
 	.uni-tag-text--warning {
-		color: #f0ad4e !important;
+		color: $uni-color-warning !important;
 	}
 
 	.uni-tag-text--error {
-		color: #dd524d !important;
+		color: $uni-color-error !important;
 	}
 
 	.uni-tag--primary {
-		color: #fff;
-		background-color: #007aff;
+		color: $uni-text-color-inverse;
+		background-color: $uni-color-primary;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #007aff;
+		border-color: $uni-color-primary;
 	}
 
 	.primary-uni-tag--inverted {
-		color: #007aff;
-		background-color: #ffffff;
+		color: $uni-color-primary;
+		background-color: $uni-bg-color;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #007aff;
+		border-color: $uni-color-primary;
 	}
 
 	.uni-tag--success {
-		color: #fff;
-		background-color: #4cd964;
+		color: $uni-text-color-inverse;
+		background-color: $uni-color-success;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #4cd964;
+		border-color: $uni-color-success;
 	}
 
 	.success-uni-tag--inverted {
-		color: #4cd964;
-		background-color: #ffffff;
+		color: $uni-color-success;
+		background-color: $uni-bg-color;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #4cd964;
+		border-color: $uni-color-success;
 	}
 
 	.uni-tag--warning {
-		color: #fff;
-		background-color: #f0ad4e;
+		color: $uni-text-color-inverse;
+		background-color: $uni-color-warning;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #f0ad4e;
+		border-color: $uni-color-warning;
 	}
 
 	.warning-uni-tag--inverted {
-		color: #f0ad4e;
-		background-color: #ffffff;
+		color: $uni-color-warning;
+		background-color: $uni-bg-color;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #f0ad4e;
+		border-color: $uni-color-warning;
 	}
 
 	.uni-tag--error {
-		color: #fff;
-		background-color: #dd524d;
+		color: $uni-text-color-inverse;
+		background-color: $uni-color-error;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #dd524d;
+		border-color: $uni-color-error;
 	}
 
 	.error-uni-tag--inverted {
-		color: #dd524d;
-		background-color: #ffffff;
+		color: $uni-color-error;
+		background-color: $uni-bg-color;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #dd524d;
+		border-color: $uni-color-error;
 	}
 
 	.uni-tag--inverted {
-		color: #333;
-		background-color: #ffffff;
+		color: $uni-text-color;
+		background-color: $uni-bg-color;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #f8f8f8;
+		border-color: $uni-bg-color-grey;
 	}
 </style>

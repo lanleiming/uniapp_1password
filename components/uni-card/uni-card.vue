@@ -109,15 +109,15 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.uni-card {
 		/* #ifndef APP-NVUE */
 		display: flex;
 		flex: 1;
 		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 		/* #endif */
-		margin: 12px 15px;
-		background-color: #ffffff;
+		margin: $uni-spacing-col-lg $uni-spacing-row-lg;
+		background-color: $uni-bg-color;
 		position: relative;
 		flex-direction: column;
 		border-radius: 5px;
@@ -129,7 +129,7 @@
 	.uni-border {
 		position: relative;
 		/* #ifdef APP-NVUE */
-		border-color: #e5e5e5;
+		border-color: $uni-border-color;
 		border-style: solid;
 		border-width: 0.5px;
 		/* #endif */
@@ -144,7 +144,7 @@
 		left: 0;
 		top: 0;
 		right: 0;
-		border: 1px solid #e5e5e5;
+		border: 1px solid $uni-border-color;
 		border-radius: 10px;
 		box-sizing: border-box;
 		width: 200%;
@@ -159,7 +159,7 @@
 	.uni-border-bottom {
 		position: relative;
 		/* #ifdef APP-NVUE */
-		border-bottom-color: #e5e5e5;
+		border-bottom-color: $uni-border-color;
 		border-bottom-style: solid;
 		border-bottom-width: 0.5px;
 		/* #endif */
@@ -174,7 +174,7 @@
 		left: 0;
 		top: 0;
 		right: 0;
-		border-bottom: 1px solid #e5e5e5;
+		border-bottom: 1px solid $uni-border-color;
 		box-sizing: border-box;
 		width: 200%;
 		height: 200%;
@@ -187,7 +187,7 @@
 	.uni-border-top {
 		position: relative;
 		/* #ifdef APP-NVUE */
-		border-top-color: #e5e5e5;
+		border-top-color: $uni-border-color;
 		border-top-style: solid;
 		border-top-width: 0.5px;
 		/* #endif */
@@ -202,7 +202,7 @@
 		left: 0;
 		top: 0;
 		right: 0;
-		border-top: 1px solid #e5e5e5;
+		border-top: 1px solid $uni-border-color;
 		box-sizing: border-box;
 		width: 200%;
 		height: 200%;
@@ -243,13 +243,13 @@
 		left: 0;
 		right: 0;
 		flex-direction: row;
-		padding: 8px 12px;
-		background-color: rgba(0, 0, 0, 0.4);
+		padding: $uni-spacing-col-base $uni-spacing-col-lg;
+		background-color: $uni-bg-color-mask;
 	}
 
 	.uni-card__thumbnailimage-title-text {
 		flex: 1;
-		font-size: 14px;
+		font-size: $uni-font-size-base;
 		color: #fff;
 	}
 
@@ -298,14 +298,14 @@
 	}
 
 	.uni-card__title-content-title {
-		font-size: 14px;
+		font-size: $uni-font-size-base;
 		line-height: 22px;
 	}
 
 	.uni-card__title-content-extra {
-		font-size: 12px;
+		font-size: $uni-font-size-sm;
 		line-height: 27px;
-		color: #999;
+		color: $uni-text-color-grey;
 	}
 
 	.uni-card__header {
@@ -314,7 +314,7 @@
 		/* #endif */
 		position: relative;
 		flex-direction: row;
-		padding: 12px;
+		padding: $uni-spacing-col-lg;
 		align-items: center;
 	}
 
@@ -323,53 +323,53 @@
 		display: flex;
 		/* #endif */
 		flex-direction: row;
-		margin-right: 8px;
+		margin-right: $uni-spacing-col-base;
 		justify-content: flex-start;
 		align-items: center;
 	}
 
 	.uni-card__header-title-text {
-		font-size: 16;
+		font-size: $uni-font-size-lg;
 		flex: 1;
 		color: #333;
 	}
 
 	.uni-card__header-extra-img {
-		height: 20px;
-		width: 20px;
-		margin-right: 8px;
+		height: $uni-img-size-sm;
+		width: $uni-img-size-sm;
+		margin-right: $uni-spacing-col-base;
 	}
 
 	.uni-card__header-extra-text {
 		flex: 1;
-		margin-left: 8px;
-		font-size: 12px;
+		margin-left: $uni-spacing-col-base;
+		font-size: $uni-font-size-sm;
 		text-align: right;
-		color: #999;
+		color: $uni-text-color-grey;
 	}
 
 	.uni-card__content {
-		color: #333;
+		color: $uni-text-color;
 	}
 
 	.uni-card__content--pd {
-		padding: 12px;
+		padding: $uni-spacing-col-lg;
 	}
 
 	.uni-card__content-extra {
-		font-size: 14px;
+		font-size: $uni-font-size-base;
 		padding-bottom: 10px;
-		color: #999;
+		color: $uni-text-color-grey;
 	}
 
 	.uni-card__footer {
 		justify-content: space-between;
-		padding: 12px;
+		padding: $uni-spacing-col-lg;
 	}
 
 	.uni-card__footer-text {
-		color: #999;
-		font-size: 12px;
+		color: $uni-text-color-grey;
+		font-size: $uni-font-size-sm;
 	}
 
 	.uni-card--shadow {
@@ -397,7 +397,7 @@
 		text-overflow: ellipsis;
 		/* #endif */
 		/* #ifdef APP-NVUE */
-		lines: 1
-			/* #endif */
+		lines: 1;
+		/* #endif */
 	}
 </style>

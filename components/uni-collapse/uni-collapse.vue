@@ -44,7 +44,7 @@
 		}
 	}
 </script>
-<style scoped>
+<style lang="scss" scoped>
 	.uni-collapse {
 		/* #ifndef APP-NVUE */
 		width: 100%;
@@ -54,6 +54,6 @@
 		flex: 1;
 		/* #endif */
 		flex-direction: column;
-		background-color: #ffffff;
+		background-color: $uni-bg-color;
 	}
 </style>

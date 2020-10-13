@@ -40,7 +40,7 @@
 			/**
 			 * 遮罩是否可点击关闭
 			 */
-			maskClick: {
+			maskClick:{
 				type: Boolean,
 				default: true
 			},
@@ -68,15 +68,15 @@
 			this.rightMode = this.mode === 'right'
 		},
 		methods: {
-			clear() {},
+			clear(){},
 			close(type) {
 				// fixed by mehaotian 抽屉尚未完全关闭或遮罩禁止点击时不触发以下逻辑
-				if ((type === 'mask' && !this.maskClick) || !this.visibleSync) return
+				if((type === 'mask' && !this.maskClick) || !this.visibleSync) return
 				this._change('showDrawer', 'visibleSync', false)
 			},
 			open() {
 				// fixed by mehaotian 处理重复点击打开的事件
-				if (this.visibleSync) return
+				if(this.visibleSync) return
 				this._change('visibleSync', 'showDrawer', true)
 			},
 			_change(param1, param2, status) {
@@ -86,16 +86,16 @@
 				}
 				this.watchTimer = setTimeout(() => {
 					this[param2] = status
-					this.$emit('change', status)
+					this.$emit('change',status)
 				}, status ? 50 : 300)
 			}
 		}
 	}
 </script>
 
-<style scoped>
-	/* 抽屉宽度
- */
+<style lang="scss" scoped>
+	// 抽屉宽度
+	$drawer-width: 220px;
 
 	.uni-drawer {
 		/* #ifndef APP-NVUE */
@@ -116,16 +116,16 @@
 		/* #endif */
 		position: absolute;
 		top: 0;
-		width: 220px;
+		width: $drawer-width;
 		bottom: 0;
-		background-color: #ffffff;
+		background-color: $uni-bg-color;
 		transition: transform 0.3s ease;
 	}
 
 	.uni-drawer--left {
 		left: 0;
 		/* #ifdef APP-NVUE */
-		transform: translateX(-220px);
+		transform: translateX(-$drawer-width);
 		/* #endif */
 		/* #ifndef APP-NVUE */
 		transform: translateX(-100%);
@@ -135,7 +135,7 @@
 	.uni-drawer--right {
 		right: 0;
 		/* #ifdef APP-NVUE */
-		transform: translateX(220px);
+		transform: translateX($drawer-width);
 		/* #endif */
 		/* #ifndef APP-NVUE */
 		transform: translateX(100%);
@@ -157,7 +157,7 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
-		background-color: rgba(0, 0, 0, 0.4);
+		background-color: $uni-bg-color-mask;
 		transition: opacity 0.3s;
 	}
 

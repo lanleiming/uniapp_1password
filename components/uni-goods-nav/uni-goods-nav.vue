@@ -18,7 +18,8 @@
 				</view>
 			</view>
 			<view :class="{'uni-tab__right':fill}" class="flex uni-tab__cart-sub-right ">
-				<view v-for="(item,index) in buttonGroup" :key="index" :style="{backgroundColor:item.backgroundColor,color:item.color}" class="flex uni-tab__cart-button-right" @click="buttonClick(index,item)"><text :style="{color:item.color}" class="uni-tab__cart-button-right-text">{{ item.text }}</text></view>
+				<view v-for="(item,index) in buttonGroup" :key="index" :style="{backgroundColor:item.backgroundColor,color:item.color}"
+				 class="flex uni-tab__cart-button-right" @click="buttonClick(index,item)"><text :style="{color:item.color}" class="uni-tab__cart-button-right-text">{{ item.text }}</text></view>
 			</view>
 		</view>
 	</view>
@@ -97,7 +98,7 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.flex {
 		/* #ifndef APP-NVUE */
 		display: flex;
@@ -139,8 +140,7 @@
 		/* #ifndef APP-NVUE */
 		display: flex;
 		/* #endif */
-		/* flex: 1;
- */
+		// flex: 1;
 		position: relative;
 		justify-content: center;
 		align-items: center;
@@ -160,7 +160,7 @@
 
 	.uni-tab__text {
 		margin-top: 3px;
-		font-size: 12px;
+		font-size: $uni-font-size-sm;
 		color: #646566;
 	}
 
@@ -175,7 +175,7 @@
 	}
 
 	.uni-tab__cart-button-right-text {
-		font-size: 14px;
+		font-size: $uni-font-size-base;
 		color: #fff;
 	}
 
@@ -193,17 +193,13 @@
 		top: 2px;
 		justify-content: center;
 		align-items: center;
-		/* width: 0;
- */
-		/* height: 0;
- */
+		// width: 0;
+		// height: 0;
 	}
 
 	.uni-tab__dot {
-		/* width: 30rpx;
- */
-		/* height: 30rpx;
- */
+		// width: 30rpx;
+		// height: 30rpx;
 		padding: 0 4px;
 		line-height: 15px;
 		color: #ffffff;
@@ -215,8 +211,7 @@
 
 	.uni-tab__dots {
 		padding: 0 4px;
-		/* width: auto;
- */
+		// width: auto;
 		border-radius: 15px;
 	}
 

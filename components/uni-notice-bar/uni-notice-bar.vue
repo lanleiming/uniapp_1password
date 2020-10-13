@@ -9,12 +9,15 @@
 		</view>
 		<!-- #endif -->
 		<!-- #ifndef MP-ALIPAY -->
-		<uni-icons v-if="showClose === true || showClose === 'true'" class="uni-noticebar-close" type="closeempty" :color="color" size="12" @click="close" />
-		<uni-icons v-if="showIcon === true || showIcon === 'true'" class="uni-noticebar-icon" type="sound" :color="color" size="14" />
+		<uni-icons v-if="showClose === true || showClose === 'true'" class="uni-noticebar-close" type="closeempty" :color="color"
+		 size="12" @click="close" />
+		<uni-icons v-if="showIcon === true || showIcon === 'true'" class="uni-noticebar-icon" type="sound" :color="color"
+		 size="14" />
 		<!-- #endif -->
 		<view ref="textBox" class="uni-noticebar__content-wrapper" :class="{'uni-noticebar__content-wrapper--scrollable':scrollable, 'uni-noticebar__content-wrapper--single':!scrollable && (single || moreText)}">
 			<view :id="elIdBox" class="uni-noticebar__content" :class="{'uni-noticebar__content--scrollable':scrollable, 'uni-noticebar__content--single':!scrollable && (single || moreText)}">
-				<text :id="elId" ref="animationEle" class="uni-noticebar__content-text" :class="{'uni-noticebar__content-text--scrollable':scrollable,'uni-noticebar__content-text--single':!scrollable && (single || moreText)}" :style="{color:color, width:wrapWidth+'px', 'animationDuration': animationDuration, '-webkit-animationDuration': animationDuration ,animationPlayState: webviewHide?'paused':animationPlayState,'-webkit-animationPlayState':webviewHide?'paused':animationPlayState, animationDelay: animationDelay, '-webkit-animationDelay':animationDelay}">{{text}}</text>
+				<text :id="elId" ref="animationEle" class="uni-noticebar__content-text" :class="{'uni-noticebar__content-text--scrollable':scrollable,'uni-noticebar__content-text--single':!scrollable && (single || moreText)}"
+				 :style="{color:color, width:wrapWidth+'px', 'animationDuration': animationDuration, '-webkit-animationDuration': animationDuration ,animationPlayState: webviewHide?'paused':animationPlayState,'-webkit-animationPlayState':webviewHide?'paused':animationPlayState, animationDelay: animationDelay, '-webkit-animationDelay':animationDelay}">{{text}}</text>
 			</view>
 		</view>
 		<view v-if="showGetMore === true || showGetMore === 'true'" class="uni-noticebar__more" @click="clickMore">
@@ -132,10 +135,10 @@
 			var pages = getCurrentPages();
 			var page = pages[pages.length - 1];
 			var currentWebview = page.$getAppWebview();
-			currentWebview.addEventListener('hide', () => {
+			currentWebview.addEventListener('hide',()=>{
 				this.webviewHide = true
 			})
-			currentWebview.addEventListener('show', () => {
+			currentWebview.addEventListener('show',()=>{
 				this.webviewHide = false
 			})
 			// #endif
@@ -266,7 +269,8 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
 	.uni-noticebar {
 		/* #ifndef APP-NVUE */
 		display: flex;
@@ -309,7 +313,6 @@
 		position: relative;
 		height: 18px;
 	}
-
 	/* #endif */
 
 	.uni-noticebar__content--scrollable {

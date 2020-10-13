@@ -8,13 +8,16 @@
 				</view>
 			</view>
 			<view :class="[direction==='column'?'uni-steps__column-container':'uni-steps__row-container']">
-				<view :class="[direction==='column'?'uni-steps__column-line-item':'uni-steps__row-line-item']" v-for="(item,index) in options" :key="index">
-					<view :class="[direction==='column'?'uni-steps__column-line':'uni-steps__row-line',direction==='column'?'uni-steps__column-line--before':'uni-steps__row-line--before']" :style="{backgroundColor:index<=active&&index!==0?activeColor:index===0?'transparent':deactiveColor}"></view>
+				<view :class="[direction==='column'?'uni-steps__column-line-item':'uni-steps__row-line-item']" v-for="(item,index) in options"
+				 :key="index">
+					<view :class="[direction==='column'?'uni-steps__column-line':'uni-steps__row-line',direction==='column'?'uni-steps__column-line--before':'uni-steps__row-line--before']"
+					 :style="{backgroundColor:index<=active&&index!==0?activeColor:index===0?'transparent':deactiveColor}"></view>
 					<view :class="[direction==='column'?'uni-steps__column-check':'uni-steps__row-check']" v-if="index === active">
 						<uni-icons :color="activeColor" type="checkbox-filled" size="14"></uni-icons>
 					</view>
 					<view :class="[direction==='column'?'uni-steps__column-circle':'uni-steps__row-circle']" v-else :style="{backgroundColor:index<active?activeColor:deactiveColor}"></view>
-					<view :class="[direction==='column'?'uni-steps__column-line':'uni-steps__row-line',direction==='column'?'uni-steps__column-line--after':'uni-steps__row-line--after']" :style="{backgroundColor:index<active&&index!==options.length-1?activeColor:index===options.length-1?'transparent':deactiveColor}"></view>
+					<view :class="[direction==='column'?'uni-steps__column-line':'uni-steps__row-line',direction==='column'?'uni-steps__column-line--after':'uni-steps__row-line--after']"
+					 :style="{backgroundColor:index<active&&index!==options.length-1?activeColor:index===options.length-1?'transparent':deactiveColor}"></view>
 				</view>
 			</view>
 		</view>
@@ -75,7 +78,7 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.uni-steps {
 		/* #ifndef APP-NVUE */
 		display: flex;
@@ -128,7 +131,7 @@
 		padding: 6px 0px;
 		border-bottom-style: solid;
 		border-bottom-width: 1px;
-		border-bottom-color: #e5e5e5;
+		border-bottom-color: $uni-border-color;
 		/* #ifndef APP-NVUE */
 		display: flex;
 		/* #endif */
@@ -136,13 +139,13 @@
 	}
 
 	.uni-steps__row-title {
-		font-size: 14px;
+		font-size: $uni-font-size-base;
 		line-height: 16px;
 		text-align: center;
 	}
 
 	.uni-steps__column-title {
-		font-size: 14px;
+		font-size: $uni-font-size-base;
 		text-align: left;
 		line-height: 18px;
 	}
@@ -154,7 +157,7 @@
 	}
 
 	.uni-steps__column-desc {
-		font-size: 12px;
+		font-size: $uni-font-size-sm;
 		text-align: left;
 		line-height: 18px;
 	}
@@ -199,12 +202,12 @@
 	.uni-steps__row-line {
 		flex: 1;
 		height: 1px;
-		background-color: #999;
+		background-color: $uni-text-color-grey;
 	}
 
 	.uni-steps__column-line {
 		width: 1px;
-		background-color: #999;
+		background-color: $uni-text-color-grey;
 	}
 
 	.uni-steps__row-line--after {
@@ -229,7 +232,7 @@
 		width: 5px;
 		height: 5px;
 		border-radius: 100px;
-		background-color: #999;
+		background-color: $uni-text-color-grey;
 		margin: 0px 3px;
 	}
 
@@ -237,7 +240,7 @@
 		width: 5px;
 		height: 5px;
 		border-radius: 100px;
-		background-color: #999;
+		background-color: $uni-text-color-grey;
 		margin: 4px 0px 5px 0px;
 	}
 

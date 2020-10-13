@@ -1,6 +1,8 @@
 <template>
 	<view class="uni-pagination">
-		<view class="uni-pagination__btn" :class="currentIndex === 1 ? 'uni-pagination--disabled' : 'uni-pagination--enabled'" :hover-class="currentIndex === 1 ? '' : 'uni-pagination--hover'" :hover-start-time="20" :hover-stay-time="70" @click="clickLeft">
+		<view class="uni-pagination__btn" :class="currentIndex === 1 ? 'uni-pagination--disabled' : 'uni-pagination--enabled'"
+		 :hover-class="currentIndex === 1 ? '' : 'uni-pagination--hover'" :hover-start-time="20" :hover-stay-time="70"
+		 @click="clickLeft">
 			<template v-if="showIcon===true || showIcon === 'true'">
 				<uni-icons color="#000" size="20" type="arrowleft" />
 			</template>
@@ -11,7 +13,9 @@
 				<text class="uni-pagination__num-current-text" style="color:#007aff">{{ currentIndex }}</text><text class="uni-pagination__num-current-text">/{{ maxPage || 0 }}</text>
 			</view>
 		</view>
-		<view class="uni-pagination__btn" :class="currentIndex === maxPage ? 'uni-pagination--disabled' : 'uni-pagination--enabled'" :hover-class="currentIndex === maxPage ? '' : 'uni-pagination--hover'" :hover-start-time="20" :hover-stay-time="70" @click="clickRight">
+		<view class="uni-pagination__btn" :class="currentIndex === maxPage ? 'uni-pagination--disabled' : 'uni-pagination--enabled'"
+		 :hover-class="currentIndex === maxPage ? '' : 'uni-pagination--hover'" :hover-start-time="20" :hover-stay-time="70"
+		 @click="clickRight">
 			<template v-if="showIcon===true || showIcon === 'true'">
 				<uni-icons color="#000" size="20" type="arrowright" />
 			</template>
@@ -116,7 +120,7 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.uni-pagination {
 		/* #ifndef APP-NVUE */
 		display: flex;
@@ -135,23 +139,23 @@
 		width: 60px;
 		height: 30px;
 		line-height: 30px;
-		font-size: 14px;
+		font-size: $uni-font-size-base;
 		position: relative;
-		background-color: #f8f8f8;
+		background-color: $uni-bg-color-grey;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
 		border-width: 1px;
 		border-style: solid;
-		border-color: #e5e5e5;
+		border-color: $uni-border-color;
 	}
 
 	.uni-pagination__child-btn {
 		/* #ifndef APP-NVUE */
 		display: flex;
 		/* #endif */
-		font-size: 14px;
+		font-size: $uni-font-size-base;
 		position: relative;
 		flex-direction: row;
 		justify-content: center;
@@ -169,8 +173,8 @@
 		align-items: center;
 		height: 30px;
 		line-height: 30px;
-		font-size: 14px;
-		color: #333;
+		font-size: $uni-font-size-base;
+		color: $uni-text-color;
 	}
 
 	.uni-pagination__num-current {
@@ -195,6 +199,6 @@
 
 	.uni-pagination--hover {
 		color: rgba(0, 0, 0, .6);
-		background-color: #f1f1f1;
+		background-color: $uni-bg-color-hover;
 	}
 </style>
