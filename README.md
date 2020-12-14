@@ -4,9 +4,11 @@
 
 目前只适配安卓，IOS未测试。
 
-下载地址：[蓝奏](https://wwa.lanzous.com/iwnbrjd429c)
+下载地址：[蓝奏](https://wwa.lanzous.com/iwnbrjd429c) 或者自行打包构建即可。
 
-或者自行打包构建即可。
+qq群：1020048903
+
+`觉得好用，请给个Star！！`
 
 ## 功能介绍
 1. 手势密码解锁
@@ -20,18 +22,21 @@
 
 ## 界面展示
 首页
-![演示](./static/1.png)
+
+ <img src="./static/1.png" width = "200"/>
 
 生成密码
-![演示](./static/2.jpg)
+
+ <img src="./static/2.jpg" width = "200"/>
 
 我的
-![演示](./static/3.jpg)
+
+ <img src="./static/3.jpg" width = "200"/>
 
 添加账号
-![演示](./static/4.png)
 
-## 联系我
-qq群：1020048903
+ <img src="./static/4.png" width = "200"/>
 
-`觉得好用，请给个Star！！`
+
+
+
