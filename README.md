@@ -4,7 +4,9 @@
 
 目前只适配安卓，IOS未测试。
 
-下载地址：[蓝奏](https://wwa.lanzous.com/iwnbrjd429c) 或者自行打包构建即可。
+[下载地址：蓝奏网盘](https://wwa.lanzous.com/iwnbrjd429c) 
+
+或者自行打包构建即可。
 
 qq群：1020048903
 
@@ -37,6 +39,13 @@ qq群：1020048903
 
  <img src="./static/4.png" width = "200"/>
 
+## 参考链接
 
-
+- [demo演示](https://hellouniapp.dcloud.net.cn/pages/component/view/view)
+- [底部导航1](https://uniapp.dcloud.io/collocation/pages?id=tabbar)
+- [底部导航2](https://ext.dcloud.net.cn/plugin?id=1799)
+- [文件选择](https://ext.dcloud.net.cn/plugin?id=901)
+- [下拉搜索](https://ext.dcloud.net.cn/plugin?id=518)
+- [plus.io](https://www.html5plus.org/doc/zh_cn/io.html)
+- [手势密码](https://ext.dcloud.net.cn/plugin?id=1623)
 
