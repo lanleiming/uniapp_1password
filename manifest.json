@@ -1,11 +1,13 @@
 {
-    "name" : "mypassword",
+    "name" : "私人密码箱",
     "appid" : "__UNI__650DD38",
     "description" : "",
-    "versionName" : "1.0.0",
+    "versionName" : "1.0.2",
     "versionCode" : "100",
     "transformPx" : false,
     "app-plus" : {
+        "runmode" : "liberate",
+        "softinputNavBar" : "none",
         "nvueCompiler" : "uni-app",
         "compilerVersion" : 3,
         "modules" : {},
@@ -33,7 +35,8 @@
                     "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
                     "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
                     "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
-                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>"
                 ]
             },
             "ios" : {},
@@ -42,18 +45,18 @@
             },
             "icons" : {
                 "android" : {
-                    "hdpi" : "C:/Users/lanleiming/Desktop/72.png",
-                    "xhdpi" : "C:/Users/lanleiming/Desktop/96.png",
-                    "xxhdpi" : "C:/Users/lanleiming/Desktop/144.png",
-                    "xxxhdpi" : "C:/Users/lanleiming/Desktop/192.png"
+                    "hdpi" : "key_128px_1291243_easyicon.net.png",
+                    "xhdpi" : "key_128px_1291243_easyicon.net.png",
+                    "xxhdpi" : "key_128px_1291243_easyicon.net.png",
+                    "xxxhdpi" : "key_128px_1291243_easyicon.net.png"
                 }
             },
             "splashscreen" : {
-                "androidStyle" : "default",
+                "androidStyle" : "common",
                 "android" : {
-                    "hdpi" : "C:/Users/lanleiming/Desktop/微信图片_20200813151006.png",
-                    "xhdpi" : "C:/Users/lanleiming/Desktop/微信图片_20200813151006.png",
-                    "xxhdpi" : "C:/Users/lanleiming/Desktop/微信图片_20200813151006.png"
+                    "hdpi" : "",
+                    "xhdpi" : "",
+                    "xxhdpi" : ""
                 }
             }
         }
@@ -63,6 +66,12 @@
         "appid" : "",
         "setting" : {
             "urlCheck" : true
+        }
+    },
+    "permissions" : {
+        // ...
+        "File" : {
+            "description" : "文件系统"
         }
     }
 }
